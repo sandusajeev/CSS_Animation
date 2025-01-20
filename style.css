@@ -70,7 +70,7 @@ nav h1 {
 
 .imgs1 {
     height: 200px;
-    width: 400px;
+    width: 360px;
     animation-name: imgs1_key;
     animation-duration: 3s;
 }
@@ -83,7 +83,7 @@ nav h1 {
 
 .imgs2 {
     height: 200px;
-    width: 400px;
+    width: 360px;
     animation-name: imgs2_key;
     animation-duration: 3s;
 }
@@ -96,7 +96,7 @@ nav h1 {
 
 .imgs3 {
     height: 200px;
-    width: 400px;
+    width: 360px;
     animation-name: imgs3_key;
     animation-duration: 3s;
 }
@@ -109,7 +109,7 @@ nav h1 {
 
 .imgs4 {
     height: 200px;
-    width: 400px;
+    width: 360px;
     animation-name: imgs4_key;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -139,7 +139,7 @@ nav h1 {
 
 .imgs5 {
     height: 200px;
-    width: 400px;
+    width: 360px;
     animation-name: imgs5_key;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -157,7 +157,7 @@ nav h1 {
 
 .imgs6 {
     height: 200px;
-    width: 400px;
+    width: 360px;
     animation-name: imgs6_key;
     animation-duration: 3s;
     animation-iteration-count: infinite;
