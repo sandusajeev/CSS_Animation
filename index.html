@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Animations</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Cake Hub - CSS Animations</title>
+    <link rel="stylesheet" href="./style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,81 +13,160 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
-    <nav>
-        <h1>CSS ANIMATIONS</h1>
-        <div class="nav_links">
-            <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="#animations">ANIMATIONS</a></li>
-                <li><a href="#footer">CONTACT US</a></li>
-            </ul>
+<body style="background-color: #98c9d8;
+background-image: linear-gradient(43deg, #e99dd2 0%, #ee9ff5 46%, #00aeff 100%);
+">
+    <div class="navbar">
+        <nav>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/013/366/641/small/birthday-cake-silhouette-for-icon-symbol-pictogram-apps-website-art-illustration-logo-or-graphic-design-element-format-png.png"
+                alt="">
+            <div class="nav_links">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#animations">CAKES</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#footer">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="home" id="animations">
+        <h2 class="main_heading"><a class="m_heading" href="#">Our offers for you</a></h2>
+        <p class="main_quotes">"Cake is happiness! If you know the way of the cake, you know the way of happiness! If you have a cake in front of you, you should not look any further for joy!"</p>
+    </div>
+    <div class="container pt-3">
+        <div class="row d-flex">
+            <div class="col-md-4 p-2">
+                <div class="Cake" id="first_cake">
+                    <div class="image">
+                        <img src="https://i0.wp.com/www.bakingbond.co.in/wp-content/uploads/2022/11/Black_Forest_Cake_05.jpg?fit=520%2C520&ssl=1"
+                            alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Black Forest <br> Rs 740.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="Cake" id="second_cake">
+                    <div class="image">
+                        <img src="https://www.cakehut.in/image/cache/catalog/2021%20cake%20photos/Oreo.-300x300w.jpg.webp"
+                            alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Oreo Chocolate <br> Rs 940.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="Cake" id="third_cake">
+                    <div class="image">
+                        <img src="https://www.cakehut.in/image/cache/catalog/2021%20cake%20photos/Red%20Velvet-300x300w.jpg.webp"
+                            alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Red Velvet <br> Rs 940.00</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
-    <div class="main_container" id="animations">
-        <div class="main_heading">
-            <h2 id="heading">CSS ANIMATIONS</h2>
-            <!-- <button class="button">EFFECTS</button> -->
+        <div class="row d-flex pt-3">
+            <div class="col-md-4 p-2">
+                <div class="Cake" id="fourth_cake">
+                    <div class="image">
+                        <img src="https://www.cakehut.in/image/cache/catalog/2021%20cake%20photos/Pineapplee-300x300w.jpg.webp"
+                            alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Pineapple <br> Rs 840.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="Cake" id="fifth_cake">
+                    <div class="image">
+                        <img src="https://www.cakehut.in/image/cache/catalog/2021%20cake%20photos/Strawberryy-300x300w.jpg.webp"
+                            alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Strawberry <br> Rs 890.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="Cake" id="sixth_cake">
+                    <div class="image">
+                        <img src="https://www.cakehut.in/image/cache/catalog/2021%20cake%20photos/Almond1-300x300w.jpg.webp"
+                            alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Almond Chocolate <br> Rs 990.00</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 ps-1">
-                <img class="imgs1"
-                    src="https://img.goodfon.com/wallpaper/big/7/8c/solnechnaia-sistema-vselennaia-galaktika-planety-zviozdy-2.webp"
-                    alt="">
-            </div>
-            <div class="col-md-4  ps-1">
-                <img class="imgs2"
-                    src="https://science.ku.dk/english/press/news/2021/one-in-five-galaxies-in-the-early-universe-could-still-be-hidden-behind-cosmic-dust/billedinformationer/skjulte_galaksa_1100x600.jpg"
-                    alt="">
-            </div>
-            <div class="col-md-4  ps-1">
-                <img class="imgs3"
-                    src="https://www.wallpaperflare.com/static/87/981/130/space-planet-universe-galaxy-wallpaper.jpg"
-                    alt="">
-            </div>
+    <div class="b_container mt-5">
+        <div class="home">
+            <h2 class="b_heading">Our Special Items</h2>
+            <p class="b_quote">"Cake is love made edible."</p>
         </div>
-    </div>
-    <div class="container pt-5">
-        <div class="row">
-            <h3 class="pb-2"> </h3>
+        <div class="b_row row">
+            <div class="col-md-4 cake_b ">
+                <div class="b_cake" id="b_first_cake">
+                    <div class="b_image">
+                        <img src="https://www.cakehut.in/image/cache/catalog/2021%20cake%20photos/Double%20Chocolatee-600x600w.jpg.webp" alt="">
+                    </div>
+                    <div class="text-center p-3">
+                        <p>Double Choclate Cake<br> Rs 990.00</p>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-4">
-                <img class="imgs4"
-                    src="https://www.meteorologiaenred.com/wp-content/uploads/2023/11/las-galaxias-mas-bonitas.jpg"
-                    alt="">
+
             </div>
-            <div class="col-md-4 ">
-                <img class="imgs5"
-                    src="https://www.earth.com/assets/_next/image/?url=https%3A%2F%2Fcff2.earth.com%2Fuploads%2F2024%2F01%2F30124456%2Fspiral-galaxy_NGC-1512_Webb_Hubble_NASA_1m-1400x850.jpg&w=1200&q=75"
-                    alt="">
-            </div>
-            <div class="col-md-4 ">
-                <img class="imgs6" src="https://images6.alphacoders.com/135/1354150.jpeg" alt="">
+            <div class="col-md-4 cake_b">
+                <div class="b_cake" id="b_second_cake">
+                    <div class="b_image">
+                        <img src="https://www.onlinedelivery.in/images/detailed/29/10.jpg.jpg"
+                            alt="">
+                    </div>
+                    <div class="text-center p-3">
+                        <p>2 Tier Black Forest Cake <br> Rs 3,995</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <section class="footer" id="footer">
+    <div class="outside" id="about">
+        <div class="inside">
+            <h2 class="about_heading">About Us</h2>
+            <p class="about_text">At Cake Hub, we believe that every celebration deserves a special touch of sweetness. Founded with a passion for baking and a love for creating unforgettable memories, we are your go-to destination for all things delicious and delightful. From birthdays and anniversaries to weddings and just-because moments, our cakes are crafted to make every occasion extra special.</p>
+        </div>
+    </div>
+    <div class="footer" id="footer">
         <div class="contact_heading">
             <h1>Follow Us On</h1>
         </div>
         <div class="icon_set">
-            <div class="icon">
+            <div class="icon" id="icon1">
                 <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
             </div>
-            <div class="icon">
+            <div class="icon" id="icon2">
                 <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
             </div>
-            <div class="icon">
+            <div class="icon" id="icon1">
                 <a href=""><i class="fa-brands fa-x-twitter fa-2x"></i></a>
             </div>
-            <div class="icon">
+            <div class="icon" id="icon2">
                 <a href=""><i class="fa-brands fa-whatsapp fa-2x"></i></a>
             </div>
         </div>
         <div class="contact_heading">
             <p> &#169; 2025 CSS ANIMATIONS. All rights reserved.</p>
         </div>
-    </section>
+    </div>
 </body>
+
 </html>

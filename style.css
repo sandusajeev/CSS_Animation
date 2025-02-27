@@ -1,66 +1,145 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f3f3f3;
+    overflow-x: hidden;
+    background: #8a3d3d;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: relative;
+    height: 160px;
+    /* background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+    background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-pink-colorful-birthday-tile-background-picture-image_1353394.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100%;
-    background: #333;
+    position: relative;
+    height: 110px;
+    width: 90%;
     color: white;
     padding: 10px 20px;
     text-align: center;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 2rem;
+    margin: 10px 50px;
+    z-index: 1;
 }
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #313b41;
+    background-image: linear-gradient(160deg, #333b3f 0%, #2a3332 100%);
+    opacity: 0.6; /* Adjust this value to control background opacity */
+    z-index: -1;
+    border-radius: inherit;
+}
+
 
 nav h1 {
     margin: 0;
     font-size: 20px;
 }
 
+nav img {
+    height: 100px;
+    width: 100px;
+}
 
-.nav_links li{
+
+/* .nav_links li {
     display: inline-block;
     margin: 0px 20px 0px 0px;
 }
 
-.nav_links a{
+
+.nav_links a {
     text-decoration: none;
-    color: #fa2b2b;
-    font-size: 15px;
+    color: #09ff00;
+    font-size: 20px;
     font-weight: bold;
 }
 
-.nav_links a:hover{
-    color: #1100ff;
-}
-.main_container {
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    margin-top: 100px;
+.nav_links a:hover {
+    color: #eeff00;
+    text-decoration: underline;
+} */
+
+.nav_links li {
+    display: inline-block;
+    margin: 0px 20px 0px 0px;
 }
 
-.main_heading {
-    height: 100px;
-    width: 100%;
-    text-align: center;
+.nav_links a {
+    position: relative;
+    text-decoration: none;
+    color: #09ff00;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
 }
 
-#heading {
+.nav_links a:hover {
+    color: #ff7300;
+}
+
+.nav_links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #eeff00;
+    transition: width 0.3s ease;
+}
+
+.nav_links a:hover::after {
+    width: 100%;
+    
+}
+
+
+.main_heading{
+    width: 100%;
+    text-align: center;
+    
+}
+
+.m_heading{
     font-size: 50px;
     color: red;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation-name: heading_key;
     animation-duration: 3s;
+    font-style: italic;
+    text-decoration: none;
 }
+
+.m_heading:hover{
+color: #e9009b;
+}
+
+
 
 @keyframes heading_key {
     from {
@@ -68,14 +147,78 @@ nav h1 {
     }
 }
 
+.main_quotes{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(37, 8, 56);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation-name: quote1_key;
+    animation-duration: 4s;
+    font-family: bradley hand, cursive;;
+}
 
-.imgs1 {
-    height: 200px;
-    width: 360px;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+@keyframes quote1_key {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.3;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.home {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.Cake {
+    height: 250px;
+    width: 300px;
+    border: solid 2px rgb(48, 40, 40);
+    border-radius: 1rem;
+    background-color: #dfd4d4;
+    padding-top: 15px;
+}
+
+.image {
+    height: 170px;
+    width: 270px;
+    margin: 0px 14px;
+    border: solid 2px rgb(165, 67, 67);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.Cake img {
+    padding: 0%;
+    margin: 0;
+    height: 170px;
+    width: 300px;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.Cake img:hover {
+    transform: scale(1.1); /* Increases size by 10% on hover */
+}
+
+#first_cake{
     animation-name: imgs1_key;
     animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes imgs1_key {
@@ -84,28 +227,22 @@ nav h1 {
     }
 }
 
-.imgs2 {
-    height: 200px;
-    width: 360px;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+#second_cake{
     animation-name: imgs2_key;
     animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes imgs2_key {
     from {
-        transform: scale(-1)
+        transform: scale(0.1)
     }
 }
 
-.imgs3 {
-    height: 200px;
-    width: 360px;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+#third_cake{
     animation-name: imgs3_key;
     animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes imgs3_key {
@@ -114,69 +251,62 @@ nav h1 {
     }
 }
 
-.imgs4 {
-    height: 200px;
-    width: 360px;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+#fourth_cake{
     animation-name: imgs4_key;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
-@keyframes imgs4_key {
+/* @keyframes imgs4_key {
+    from {
+        transform: translateY(50%)
+    }
+} */
+
+/* @keyframes imgs4_key {
     0% {
         transform: rotate(0deg);
     }
 
     20% {
-        transform: rotate(-45deg);
-    }
-
-    40% {
-        transform: rotate(0deg);
-    }
-
-    80% {
         transform: rotate(45deg);
     }
 
+    40% {
+        transform: rotate(90deg);
+    }
+
+    60% {
+        transform: rotate(180deg);
+    }
+
+    70% {
+        transform: rotate(360deg);
+    }
+    8% {
+        transform: rotate(deg);
+    }
     100% {
         transform: rotate(0deg);
     }
+} */
+
+@keyframes imgs4_key {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.imgs5 {
-    height: 200px;
-    width: 360px;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+#fifth_cake{
     animation-name: imgs5_key;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
-
 @keyframes imgs5_key {
-    40% {
-        transform: scale(2, 2);
-    }
-
-    80% {
-        transform: scale(0.5, 0.5);
-    }
-}
-
-.imgs6 {
-    height: 200px;
-    width: 360px;
-    border-radius: 3rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    animation-name: imgs6_key;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes imgs6_key {
     40% {
         opacity: 0;
     }
@@ -186,8 +316,169 @@ nav h1 {
     }
 }
 
+#sixth_cake{
+    animation-name: imgs6_key;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imgs6_key {
+    from {
+        transform: translateY(-50%)
+    }
+}
+
+
+.b_heading{
+text-align: center;
+color: #ce1a1a;
+font-size: 30px;
+}
+
+.b_quote{
+    text-align: center;
+    color: #081b31; 
+    font-size: 18px;
+}
+
+.b_cake{
+    height: 400px;
+    width: 300px;
+    border: solid 2px rgb(116, 116, 158);
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.b_image {
+    height: 250px;
+    width: 250px;
+    margin: 20px 24px;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.b_cake img {
+    padding: 0%;
+    margin: 0;
+    height: 250px;
+    width: 250px;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-size: 100% 100%;
+}
+
+/*  */
+.cake_b{
+    position: relative;
+}
+
+#b_first_cake {
+    position: absolute;
+    animation-name: b_imgs1_key;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* @keyframes b_imgs1_key {
+    0% {
+        transform: translateX(765px)
+    }
+    50% {
+        transform: translateX(0px)
+    }
+    100% {
+        transform: translateX(765px)
+    }
+
+} */
+
+@keyframes b_imgs1_key {
+    0% {
+        transform: translateX(800px)
+        rotate(360deg);
+    }
+    25% {
+        transform: translateX(600px)
+    }
+    50% {
+        transform: translateX(0px)
+    }
+    75% {
+        transform: translateX(600px)
+    }
+    100% {
+        transform: translateX(800px)
+        rotateY(360deg)
+    }
+
+}
+
+#b_second_cake {
+    position: absolute;
+    animation-name: b_imgs2_key;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes b_imgs2_key {
+    0% {
+        transform: translateX(-800px)
+        rotate(-360deg);
+    }
+    25% {
+        transform: translateX(-600px)
+    }
+    50% {
+        transform: translateX(0px)
+    }
+    75% {
+        transform: translateX(-600px)
+    }
+    100% {
+        transform: translateX(-800px)
+         rotateY(360deg)
+    }
+
+}
+.b_container{
+    position: relative;
+    height: 600px;
+}
+
+.b_row{
+    padding-left: 100px;
+}
+
+.about_heading{
+    text-align: center;
+    color: #0e00d8;
+    font-size: 28px;
+}
+
+.about_text{
+    text-align: justify;
+    padding: 10px 20px;
+    color: #000000;
+}
+
+.outside{
+    position: relative;
+    height: 120px;
+    padding-top: 10px;
+}
+
+.inside{
+    position: absolute;
+    margin: 20px 10px;
+    background-color: rgba(49, 59, 65, 0.5); /* Adjust the last value (0.5) for desired transparency */
+    border-radius: 1rem;
+    padding-top: 10px;
+}
+
+
 /* footer */
 .footer{
+    position: relative;
     height: 205px;
     width: 100%;
     background-color: #000;
@@ -226,3 +517,269 @@ nav h1 {
 .contact_heading{
     margin-top: 20px;
 }
+
+.container {
+    background: transparent !important;
+}
+
+#icon1{
+    animation-name: icon1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes icon1 {
+    0% {
+        transform: translateY(20px)
+    }
+    25% {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(20px)
+    }
+    75% {
+        transform: translateY(0px)
+    }
+    100% {
+        transform: translateY(20px)
+    }
+}
+
+#icon2{
+    animation-name: icon2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes icon2 {
+    0% {
+        transform: translateY(0px)
+    }
+    25% {
+        transform: translateY(20px)
+    }
+    50% {
+        transform: translateY(0px)
+    }
+    75% {
+        transform: translateY(20px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+/* Media Queries */
+
+/* Mobile devices (up to 767px) */
+
+@media (max-width: 767px) {
+    * {
+        /* box-sizing: border-box; */
+        box-sizing: content-box;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .nav_links li {
+        display: column;
+        margin: 10px 0;
+    }
+
+    .nav_links a {
+        font-size: 10px;
+    }
+
+    .m_heading {
+        font-size: 30px;
+    }
+
+    .main_quotes {
+        font-size: 16px;
+    }
+
+    .Cake {
+        margin-left: 20px;
+        height: auto;
+        width: 65%;
+    }
+
+    .Cake img {
+        width: 100%;
+        height: auto;
+    }
+
+    .b_cake {
+        height: auto;
+        width: 50%;
+    }
+
+    .b_image {
+        width: 80%;
+        height: auto;
+    }
+
+    .b_row {
+        padding-left: 0;
+    }
+
+    #b_first_cake {
+        animation-duration: 4s;
+    }
+
+    @keyframes b_imgs1_key {
+        0% {
+            transform: translateX(250px)
+        }
+        25% {
+            transform: translateX(0px)
+        }
+        50% {
+            transform: translateX(250px)
+        }
+        75% {
+            transform: translateX(0px)
+        }
+        100% {
+            transform: translateX(250px)
+        }   
+}
+#b_second_cake {
+    animation-duration: 4s;
+}
+
+@keyframes b_imgs2_key {
+    0% {
+        transform: translateY(0px)
+    }
+    25% {
+        transform: translateY(20px)
+    }
+    50% {
+        transform: translateY(0px)
+    }
+    75% {
+        transform: translateY(20px)
+    }
+    100% {
+        transform: translateY(0px)
+    }  
+}
+
+.about_heading{
+    font-size: 15px;
+}
+.about_text{
+    font-size: 10px;
+}
+
+}
+
+/* Tablet devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        height: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .nav_links li {
+        margin: 0px 10px;
+    }
+
+    .m_heading {
+        font-size: 40px;
+    }
+
+    .main_quotes {
+        font-size: 17px;
+    }
+
+    .Cake {
+        height: auto;
+        width: 130px;
+        margin: 1%;
+    }
+
+    .image {
+        width: 100px;
+        height: auto;
+    }
+    .Cake img {
+        width: 100px;
+        height: auto;
+    }
+
+    .b_cake {
+        height: auto;
+        width: 90%;
+        margin: 1%;
+    }
+
+    .b_image {
+        width: 82%;
+        height: auto;
+    }
+
+    .b_row {
+        padding-left: 50px;
+    }
+
+    #b_first_cake {
+        animation-duration: 4s;
+    }
+
+    @keyframes b_imgs1_key {
+        0% {
+            transform: translateY(20px)
+        }
+        25% {
+            transform: translateY(0px)
+        }
+        50% {
+            transform: translateY(20px)
+        }
+        75% {
+            transform: translateY(0px)
+        }
+        100% {
+            transform: translateY(20px)
+        }   
+}
+#b_second_cake {
+    animation-duration: 4s;
+}
+
+@keyframes b_imgs2_key {
+    0% {
+        transform: translateY(0px)
+    }
+    25% {
+        transform: translateY(20px)
+    }
+    50% {
+        transform: translateY(0px)
+    }
+    75% {
+        transform: translateY(20px)
+    }
+    100% {
+        transform: translateY(0px)
+    }  
+}
+}
+
